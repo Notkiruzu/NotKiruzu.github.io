@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiruzu - Cybersecurity Student & Community Manager</title>
+    <meta name="description" content="Kiruzu is a cybersecurity student and experienced Minecraft community manager specializing in server leadership, team coordination, and infrastructure security.">
+    
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="Kiruzu - Cybersecurity Student & Community Manager">
+    <meta property="og:description" content="Experienced Minecraft community manager with expertise in server leadership, team coordination, and cybersecurity.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;500;600;700;800;900&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Glitch Overlay -->
+    <div class="glitch-overlay" id="glitch-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-logo">
+            <span class="logo-text" data-text="KIRUZU">KIRUZU</span>
+        </div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link" data-text="HOME">HOME</a>
+            <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
+            <a href="#experience" class="nav-link" data-text="EXPERIENCE">EXPERIENCE</a>
+            <a href="#skills" class="nav-link" data-text="SKILLS">SKILLS</a>
+            <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#hero" class="mobile-link">HOME</a>
+            <a href="#about" class="mobile-link">ABOUT</a>
+            <a href="#experience" class="mobile-link">EXPERIENCE</a>
+            <a href="#skills" class="mobile-link">SKILLS</a>
+            <a href="#contact" class="mobile-link">CONTACT</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <div class="grid-lines"></div>
+                <div class="floating-blocks" id="floating-blocks"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="profile-container">
+                    <div class="profile-ring profile-ring-1"></div>
+                    <div class="profile-ring profile-ring-2"></div>
+                    <div class="profile-ring profile-ring-3"></div>
+                    <div class="profile-circle">
+                        <img src="logo.png" alt="Kiruzu" class="profile-image">
+                    </div>
+                    <div class="profile-glow"></div>
+                </div>
+
+                <div class="hero-text">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text">AVAILABLE FOR PROJECTS</span>
+                    </div>
+                    
+                    <h1 class="hero-name glitch" data-text="KIRUZU">
+                        <span class="hero-name-line"></span>
+                        KIRUZU
+                        <span class="hero-name-line"></span>
+                    </h1>
+                    
+                    <div class="hero-titles">
+                        <div class="title-wrapper">
+                            <span class="title-bracket">[</span>
+                            <div class="title-rotator" id="title-rotator">
+                                <span class="title-item active">CYBERSECURITY STUDENT</span>
+                                <span class="title-item">DEVELOPER</span>
+                                <span class="title-item">COMMUNITY MANAGER</span>
+                                <span class="title-item">GENERAL MANAGER</span>
+                            </div>
+                            <span class="title-bracket">]</span>
+                        </div>
+                    </div>
+                    
+                    <p class="hero-tagline">
+                        <span class="tagline-decorator">//</span>
+                        Returning to Minecraft projects with experience in leadership, security, and systems
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#contact" class="cta-button primary">
+                            <span class="cta-bg"></span>
+                            <span class="cta-text">GET IN TOUCH</span>
+                            <span class="cta-icon">→</span>
+                        </a>
+                        <a href="#experience" class="cta-button secondary">
+                            <span class="cta-text">VIEW EXPERIENCE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span class="scroll-text">SCROLL</span>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">YEARS EXP</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">PROJECTS</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">K+ MANAGED</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="section-bg">
+                <div class="code-rain" id="code-rain"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">
+                        <span class="title-line"></span>
+                        ABOUT ME
+                        <span class="title-line"></span>
+                    </h2>
+                    <p class="section-subtitle">WHO I AM</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <div class="frame-corner tl"></div>
+                            <div class="frame-corner tr"></div>
+                            <div class="frame-corner bl"></div>
+                            <div class="frame-corner br"></div>
+                            <div class="image-glitch">
+                                <img src="logo.png" alt="Kiruzu">
+                            </div>
+                        </div>
+                        <div class="image-decoration">
+                            <div class="dec-line"></div>
+                            <div class="dec-box"></div>
+                            <div class="dec-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="about-text">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot yellow"></span>
+                                <span class="terminal-dot green"></span>
+                                <span class="terminal-title">kiruzu@portfolio:~</span>
+                            </div>
+                            <div class="terminal-body">
+                                <p class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">cat about.txt</span>
+                                </p>
+                                <div class="terminal-output">
+                                    <p>I'm a <span class="highlight">cybersecurity student</span> with a deep-rooted background in Minecraft community management and server operations.</p>
+                                    <br>
+                                    <p>Over the years, I've led teams, managed large-scale communities, and developed a strong understanding of both the <span class="highlight">technical</span> and <span class="highlight">interpersonal</span> aspects of running successful projects.</p>
+                                    <br>
+                                    <p>My interests span from <span class="highlight">infrastructure security</span> to <span class="highlight">backend development</span>, and I bring a methodical, security-conscious approach to everything I work on.</p>
+                                    <br>
+                                    <p>Now, I'm returning to the Minecraft space to contribute my refined skillset to <span class="highlight">meaningful projects</span>.</p>
+                                </div>
+                                <p class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-cursor">_</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="about-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Development</span>
+                            <span class="tag">Management</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-line"></span>
+                        EXPERIENCE
+                        <span class="title-line"></span>
+                    </h2>
+                    <p class="section-subtitle">WHERE I'VE WORKED</p>
+                </div>
+
+                <div class="experience-timeline">
+                    <div class="timeline-line">
+                        <div class="timeline-progress" id="timeline-progress"></div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-right">
+                        <div class="card-connector">
+                            <div class="connector-dot"></div>
+                            <div class="connector-line"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                        <path d="M2 17l10 5 10-5"/>
+                                        <path d="M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <div class="card-titles">
+                                    <h3 class="role-title">GENERAL MANAGER</h3>
+                                    <p class="organization">InfuseSMP</p>
+                                </div>
+                                <div class="card-status active">
+                                    <span class="status-pulse"></span>
+                                    LEADERSHIP
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="responsibilities">
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Oversaw full-scale server operations and executive leadership decisions</span>
+                                    </li>
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Coordinated cross-functional teams including developers, moderators, and content creators</span>
+                                    </li>
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Implemented strategic planning initiatives for community growth and retention</span>
+                                    </li>
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Managed infrastructure security protocols and risk assessment procedures</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <div class="tech-stack">
+                                    <span class="tech">Java</span>
+                                    <span class="tech">Discord</span>
+                                    <span class="tech">Linux</span>
+                                    <span class="tech">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-left">
+                        <div class="card-connector">
+                            <div class="connector-dot"></div>
+                            <div class="connector-line"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                        <path d="M2 17l10 5 10-5"/>
+                                        <path d="M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <div class="card-titles">
+                                    <h3 class="role-title">SENIOR ADMIN</h3>
+                                    <p class="organization">ZedarMC</p>
+                                </div>
+                                <div class="card-status">
+                                    <span class="status-pulse"></span>
+                                    ADMINISTRATION
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="responsibilities">
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Administered Discord community with 27K+ members</span>
+                                    </li>
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Appeals Supervisor overseeing player dispute resolutions</span>
+                                    </li>
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Staff recruitment lead responsible for team growth and onboarding</span>
+                                    </li>
+                                    <li>
+                                        <span class="bullet"></span>
+                                        <span>Supported server operations with 400-600 daily active players</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <div class="tech-stack">
+                                    <span class="tech">Discord</span>
+                                    <span class="tech">Recruitment</span>
+                                    <span class="tech">Appeals</span>
+                                    <span class="tech">Moderation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">
+                        <span class="title-line"></span>
+                        SKILLS
+                        <span class="title-line"></span>
+                    </h2>
+                    <p class="section-subtitle">WHAT I DO BEST</p>
+                </div>
+
+                <div class="skills-showcase">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <span class="category-icon">◈</span>
+                            MANAGEMENT
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">👥</span>
+                                </div>
+                                <h4 class="skill-name">Team Leadership</h4>
+                                <p class="skill-desc">Building and leading high-performing teams</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="95"></div>
+                                    </div>
+                                    <span class="level-text">EXPERT</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">🎯</span>
+                                </div>
+                                <h4 class="skill-name">Strategic Planning</h4>
+                                <p class="skill-desc">Long-term vision & project roadmaps</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="90"></div>
+                                    </div>
+                                    <span class="level-text">EXPERT</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">💬</span>
+                                </div>
+                                <h4 class="skill-name">Community Management</h4>
+                                <p class="skill-desc">Engagement & moderation at scale</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="95"></div>
+                                    </div>
+                                    <span class="level-text">EXPERT</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">⚖️</span>
+                                </div>
+                                <h4 class="skill-name">Conflict Resolution</h4>
+                                <p class="skill-desc">Mediating disputes & maintaining harmony</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="88"></div>
+                                    </div>
+                                    <span class="level-text">ADVANCED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <span class="category-icon">◈</span>
+                            TECHNICAL
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">🔒</span>
+                                </div>
+                                <h4 class="skill-name">Cybersecurity</h4>
+                                <p class="skill-desc">Security-first approach to systems</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="85"></div>
+                                    </div>
+                                    <span class="level-text">ADVANCED</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">💻</span>
+                                </div>
+                                <h4 class="skill-name">Backend Development</h4>
+                                <p class="skill-desc">Java & Python development</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="80"></div>
+                                    </div>
+                                    <span class="level-text">ADVANCED</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">🖥️</span>
+                                </div>
+                                <h4 class="skill-name">Server Administration</h4>
+                                <p class="skill-desc">Linux systems & infrastructure</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="85"></div>
+                                    </div>
+                                    <span class="level-text">ADVANCED</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon-wrapper">
+                                    <div class="skill-icon-bg"></div>
+                                    <span class="skill-icon">🤖</span>
+                                </div>
+                                <h4 class="skill-name">Discord Automation</h4>
+                                <p class="skill-desc">Bot development & integrations</p>
+                                <div class="skill-level">
+                                    <div class="level-bar">
+                                        <div class="level-fill" data-level="90"></div>
+                                    </div>
+                                    <span class="level-text">EXPERT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Looking For Section -->
+        <section class="section looking-for" id="looking-for">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">
+                        <span class="title-line"></span>
+                        LOOKING FOR
+                        <span class="title-line"></span>
+                    </h2>
+                    <p class="section-subtitle">MY IDEAL PROJECT</p>
+                </div>
+
+                <div class="looking-for-content">
+                    <div class="requirements-grid">
+                        <div class="requirement-card">
+                            <div class="req-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                    <polyline points="2 17 12 22 22 17"/>
+                                    <polyline points="2 12 12 17 22 12"/>
+                                </svg>
+                            </div>
+                            <h4>Scale & Scope</h4>
+                            <p>Mid to large-scale Minecraft projects with established or growing communities</p>
+                        </div>
+
+                        <div class="requirement-card">
+                            <div class="req-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h4>Team Culture</h4>
+                            <p>Teams that value professionalism, clear communication, and structured operations</p>
+                        </div>
+
+                        <div class="requirement-card">
+                            <div class="req-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                </svg>
+                            </div>
+                            <h4>Technical Focus</h4>
+                            <p>Projects with a focus on technical excellence and security awareness</p>
+                        </div>
+
+                        <div class="requirement-card">
+                            <div class="req-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <h4>Leadership Role</h4>
+                            <p>Opportunities in leadership or senior management positions</p>
+                        </div>
+
+                        <div class="requirement-card">
+                            <div class="req-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <h4>Collaboration</h4>
+                            <p>Collaborative environments where strategic input is valued</p>
+                        </div>
+
+                        <div class="requirement-card">
+                            <div class="req-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <h4>Flexibility</h4>
+                            <p>Flexible time commitments that respect work-life balance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">
+                        <span class="title-line"></span>
+                        CONTACT
+                        <span class="title-line"></span>
+                    </h2>
+                    <p class="section-subtitle">LET'S CONNECT</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <div class="contact-glow"></div>
+                        <div class="contact-inner">
+                            <h3 class="contact-heading">Ready to work together?</h3>
+                            <p class="contact-text">I'm currently available for new projects and opportunities. Let's build something amazing.</p>
+                            
+                            <div class="contact-methods">
+                                <a href="https://discord.com/users/kiru.zu" class="contact-method discord" target="_blank" rel="noopener">
+                                    <div class="method-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="method-info">
+                                        <span class="method-label">DISCORD</span>
+                                        <span class="method-value">kiru.zu</span>
+                                    </div>
+                                    <span class="method-arrow">→</span>
+                                </a>
+                            </div>
+
+                            <div class="contact-decoration">
+                                <span class="dec-text">AVAILABLE_FOR_PROJECTS = TRUE;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text glitch" data-text="KIRUZU">KIRUZU</span>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">© 2026 KIRUZU. ALL RIGHTS RESERVED.</p>
+            <p class="footer-tagline">CRAFTED WITH <span class="heart">♥</span> AND CODE</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
